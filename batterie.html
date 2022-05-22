@@ -9,9 +9,6 @@
     <title>TP Batterie</title>
 
     <style>
-        .container-fluid {
-            height: 100vh;
-        }
 
         p {
             margin: 0;
@@ -32,44 +29,97 @@
   </head>
   <body>
 
-    <div class="container-fluid d-flex flex-column flex-lg-row text-center">
+    <div class="container d-flex flex-column flex-lg-row-reverse text-center mx-big-div">
 
-        <div class="main d-flex flex-column flex-lg-row col-12 col-lg-4">
+        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
 
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>Q</p><span class="text-warning">CLAP</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>S</p><span class="text-warning">HIHAT</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>D</p><span class="text-warning">KICK</span></div>
-
-        </div>
-        <div class="main d-flex flex-column flex-lg-row col-12 col-lg-4">
-
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>F</p><span class="text-warning">OPENHAT</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>G</p><span class="text-warning">BOOM</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>H</p><span class="text-warning">RIDE</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="clap"><p>Q</p><span class="text-warning">CLAP</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="hihat"><p>S</p><span class="text-warning">HIHAT</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="kick"><p>D</p><span class="text-warning">KICK</span></div>
 
         </div>
-        <div class="main d-flex flex-column flex-lg-row col-12 col-lg-4">
+        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
 
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>J</p><span class="text-warning">SNARE</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>K</p><span class="text-warning">TOM</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded"><p>L</p><span class="text-warning">TINK</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="openhat"><p>F</p><span class="text-warning">OPENHAT</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="boom"><p>G</p><span class="text-warning">BOOM</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="ride"><p>H</p><span class="text-warning">RIDE</span></div>
+        </div>
+        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
+
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="snare"><p>J</p><span class="text-warning">SNARE</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="tom"><p>K</p><span class="text-warning">TOM</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="tink"><p>L</p><span class="text-warning">TINK</span></div>
 
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
     
     <script>
+        var clap = document.getElementById("clap");        
+        var hihat = document.getElementById("hihat");         
+        var kick = document.getElementById("kick");
+        var openhat = document.getElementById("openhat");
+        var boom = document.getElementById("boom");
+        var ride = document.getElementById("ride");
+        var snare = document.getElementById("snare");
+        var tom = document.getElementById("tom");
+        var tink = document.getElementById("tink");
+
+        var clapsound = new Audio("Ressources/sounds/clap.wav");
+        var hihatsound = new Audio("Ressources/sounds/hihat.wav");
+        var kicksound = new Audio("Ressources/sounds/kick.wav");
+        var openhatsound = new Audio("Ressources/sounds/openhat.wav");
+        var boomsound = new Audio("Ressources/sounds/boom.wav");
+        var ridesound = new Audio("Ressources/sounds/ride.wav");
+        var snaresound = new Audio("Ressources/sounds/snare.wav");
+        var tomsound = new Audio("Ressources/sounds/tom.wav");
+        var tinksound = new Audio("Ressources/sounds/tink.wav");
+
+        clap.addEventListener("click", function () {
+            console.log("clap");
+            clapsound.play();
+        })
+
+        hihat.addEventListener("click", function () {
+            console.log("hihat")
+            hihatsound.play();
+        })
+
+        kick.addEventListener("click", function () {
+            console.log("kick")
+            kicksound.play();
+        })
+
+        openhat.addEventListener("click", function () {
+            console.log("openhat")
+            openhatsound.play();
+        })
+
+        boom.addEventListener("click", function () {
+            console.log("boom")
+            boomsound.play();
+        })
+
+        ride.addEventListener("click", function () {
+            console.log("ride")
+            ridesound.play();
+        })
+
+        snare.addEventListener("click", function () {
+            console.log("snare")
+            snaresound.play();
+        })
+
+        tom.addEventListener("click", function () {
+            console.log("tom")
+            tomsound.play();
+        })
+
+        tink.addEventListener("click", function () {
+            console.log("tink")
+            tinksound.play();
+        })
+
+
 
     </script>
 
