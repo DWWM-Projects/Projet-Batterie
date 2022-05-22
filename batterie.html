@@ -91,14 +91,37 @@
             }, 500)
         })
 
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "q") {
+                console.log("clap");
+                clapsound.play();
+                clap.classList.add("playing");
+                setTimeout(function () {
+                    clap.classList.remove("playing");
+                }, 500)
+            }
+        })        
+
         hihat.addEventListener("click", function () {
             console.log("hihat")
             hihatsound.play();
             hihat.classList.add("playing");
             setTimeout(function () {
-            hihat.classList.remove("playing");
+                body.style.backgroundColor = "black";
+                hihat.classList.remove("playing");
             }, 500)
         })
+
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "s") {
+                console.log("hihat");
+                hihatsound.play();
+                hihat.classList.add("playing");
+                setTimeout(function () {
+                    hihat.classList.remove("playing");
+                }, 500)
+            }
+        })       
 
         kick.addEventListener("click", function () {
             console.log("kick")
@@ -109,6 +132,17 @@
             }, 500)
         })
 
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "d") {
+                console.log("kick");
+                kicksound.play();
+                kick.classList.add("playing");
+                setTimeout(function () {
+                    kick.classList.remove("playing");
+                }, 500)
+            }
+        })       
+
         openhat.addEventListener("click", function () {
             console.log("openhat")
             openhatsound.play();
@@ -117,6 +151,17 @@
             openhat.classList.remove("playing");
             }, 500)
         })
+
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "f") {
+                console.log("openhat");
+                openhatsound.play();
+                openhat.classList.add("playing");
+                setTimeout(function () {
+                    openhat.classList.remove("playing");
+                }, 500)
+            }
+        })       
 
         boom.addEventListener("click", function () {
             console.log("boom")
@@ -127,6 +172,17 @@
             }, 500)
         })
 
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "g") {
+                console.log("boom");
+                boomsound.play();
+                boom.classList.add("playing");
+                setTimeout(function () {
+                    boom.classList.remove("playing");
+                }, 500)
+            }
+        })       
+
         ride.addEventListener("click", function () {
             console.log("ride")
             ridesound.play();
@@ -135,6 +191,17 @@
             ride.classList.remove("playing");
             }, 500)
         })
+
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "h") {
+                console.log("ride");
+                ridesound.play();
+                ride.classList.add("playing");
+                setTimeout(function () {
+                    ride.classList.remove("playing");
+                }, 500)
+            }
+        })       
 
         snare.addEventListener("click", function () {
             console.log("snare")
@@ -145,6 +212,17 @@
             }, 500)
         })
 
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "j") {
+                console.log("snare");
+                snaresound.play();
+                snare.classList.add("playing");
+                setTimeout(function () {
+                    snare.classList.remove("playing");
+                }, 500)
+            }
+        })       
+
         tom.addEventListener("click", function () {
             console.log("tom")
             tomsound.play();
@@ -153,6 +231,17 @@
             tom.classList.remove("playing");
             }, 500)
         })
+
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "k") {
+                console.log("tom");
+                tomsound.play();
+                tom.classList.add("playing");
+                setTimeout(function () {
+                    tom.classList.remove("playing");
+                }, 500)
+            }
+        })       
 
         tink.addEventListener("click", function () {
             console.log("tink")
@@ -163,7 +252,16 @@
             }, 500)
         })
 
-
+        window.addEventListener("keydown", function (event) {
+            if (event.key == "l") {
+                console.log("tink");
+                tinksound.play();
+                tink.classList.add("playing");
+                setTimeout(function () {
+                    tink.classList.remove("playing");
+                }, 500)
+            }
+        })
 
     </script>
 
