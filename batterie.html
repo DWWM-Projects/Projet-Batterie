@@ -9,11 +9,14 @@
 
     <style>
         body {
-            background: rgb(34,193,195);
-            background: radial-gradient(circle, rgba(34,193,195,1) 3%, rgba(20,24,79,1) 100%);
+            background-color: rgb(173, 216, 230);
+            /* background: rgb(34,193,195);
+            background: radial-gradient(circle, rgba(34,193,195,1) 3%, rgba(20,24,79,1) 100%); */
         }
+
         .container {
             height: 100vh;
+            width: 100vw;
         }
 
         p {
@@ -21,7 +24,8 @@
             padding: 0;
         }
 
-        div > div {
+        .touch-pack {
+            background-color: #ffffff;
             font-size: 20px;
             cursor: pointer;            
         }
@@ -32,7 +36,7 @@
 
         .playing {
             border: 1px solid red !important;
-            background-color: red;
+            /* background-color: red; */
         }
 
         
@@ -41,26 +45,26 @@
   </head>
   <body>
 
-    <div class="container d-flex justify-content-lg-center align-items-lg-center flex-column flex-lg-row-reverse text-center mx-auto">
+    <div class="container d-flex justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center flex-column flex-md-row-reverse flex-lg-row-reverse text-center mx-auto">
 
-        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
+        <div class="big-div d-flex flex-column flex-md-column flex-lg-row-reverse col-12 col-md-4 col-lg-4 ">
 
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="clap"><p>Q</p><span class="text-warning">CLAP</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="clap"><p>Q</p><span class="text-warning">CLAP</span></div>
             <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="hihat"><p>S</p><span class="text-warning">HIHAT</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="kick"><p>D</p><span class="text-warning">KICK</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="kick"><p>D</p><span class="text-warning">KICK</span></div>
 
         </div>
-        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
+        <div class="big-div d-flex flex-column flex-md-column flex-lg-row-reverse col-12 col-md-4 col-lg-4 mx-md-2 mx-lg-2">
 
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="openhat"><p>F</p><span class="text-warning">OPENHAT</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="openhat"><p>F</p><span class="text-warning">OPENHAT</span></div>
             <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="boom"><p>G</p><span class="text-warning">BOOM</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="ride"><p>H</p><span class="text-warning">RIDE</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="ride"><p>H</p><span class="text-warning">RIDE</span></div>
         </div>
-        <div class="big-div d-flex flex-column flex-lg-row-reverse col-12 col-lg-4 mx-lg-3">
+        <div class="big-div d-flex flex-column flex-md-column flex-lg-row-reverse col-12 col-md-4 col-lg-4 ">
 
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="snare"><p>J</p><span class="text-warning">SNARE</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="snare"><p>J</p><span class="text-warning">SNARE</span></div>
             <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="tom"><p>K</p><span class="text-warning">TOM</span></div>
-            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 mx-lg-1 py-1 border-dark border rounded" id="tink"><p>L</p><span class="text-warning">TINK</span></div>
+            <div class="touch-pack d-flex flex-column col-12 col-lg-4 my-1 py-1 border-dark border rounded" id="tink"><p>L</p><span class="text-warning">TINK</span></div>
 
         </div>
     </div>
@@ -94,10 +98,13 @@
             clapsound.currentTime = 0;
             clapsound.play();
             clap.classList.add("playing");
-            body.style.backgroundColor = "#33658a !important";
+            body.style.backgroundColor = "#568259";
+            clap.style.backgroundColor = "#fd5200";
             setTimeout(function () {
                 clap.classList.remove("playing");
-                body.syle.backgroundColor("background: rgb(34,193,195); background: radial-gradient(circle, rgba(34,193,195,1) 3%, rgba(20,24,79,1) 100%);")
+                // body.syle.backgroundColor("background: rgb(34,193,195); background: radial-gradient(circle, rgba(34,193,195,1) 3%, rgba(20,24,79,1) 100%);")
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                clap.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -107,8 +114,12 @@
                 clapsound.currentTime = 0;
                 clapsound.play();
                 clap.classList.add("playing");
+                body.style.backgroundColor = "#568259";
+                clap.style.backgroundColor = "#fd5200";
                 setTimeout(function () {
                     clap.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    clap.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })        
@@ -118,8 +129,12 @@
             hihatsound.currentTime = 0;
             hihatsound.play();
             hihat.classList.add("playing");
+            body.style.backgroundColor = "#33658a";
+            hihat.style.backgroundColor = "#2f4858";
             setTimeout(function () {                
                 hihat.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                hihat.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -129,8 +144,12 @@
                 hihatsound.currentTime = 0;
                 hihatsound.play();
                 hihat.classList.add("playing");
+                body.style.backgroundColor = "#33658a";
+                hihat.style.backgroundColor = "#2f4858";
                 setTimeout(function () {
                     hihat.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    hihat.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -140,8 +159,12 @@
             kicksound.currentTime = 0;
             kicksound.play();
             kick.classList.add("playing");
+            body.style.backgroundColor = "#fd5200";
+            kick.style.backgroundColor = "#f6ae2d";
             setTimeout(function () {
                 kick.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                kick.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -151,8 +174,12 @@
                 kicksound.currentTime = 0;
                 kicksound.play();
                 kick.classList.add("playing");
+                body.style.backgroundColor = "#fd5200";
+                kick.style.backgroundColor = "#f6ae2d";
                 setTimeout(function () {
                     kick.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    kick.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -162,8 +189,12 @@
             openhatsound.currentTime = 0;
             openhatsound.play();
             openhat.classList.add("playing");
+            body.style.backgroundColor = "#fd5200";
+            openhat.style.backgroundColor = "#4381c1";
             setTimeout(function () {
                 openhat.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                openhat.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -173,8 +204,12 @@
                 openhatsound.currentTime = 0;
                 openhatsound.play();
                 openhat.classList.add("playing");
+                body.style.backgroundColor = "#fd5200";
+                openhat.style.backgroundColor = "#4381c1";
                 setTimeout(function () {
                     openhat.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    openhat.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -184,8 +219,12 @@
             boomsound.currentTime = 0;
             boomsound.play();
             boom.classList.add("playing");
+            body.style.backgroundColor = "#f6ae2d";
+            boom.style.backgroundColor = "#f593e0";
             setTimeout(function () {
                 boom.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                boom.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -195,8 +234,12 @@
                 boomsound.currentTime = 0;
                 boomsound.play();
                 boom.classList.add("playing");
+                body.style.backgroundColor = "#f6ae2d";
+                boom.style.backgroundColor = "#f593e0";
                 setTimeout(function () {
                     boom.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    boom.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -206,8 +249,12 @@
             ridesound.currentTime = 0;
             ridesound.play();
             ride.classList.add("playing");
+            body.style.backgroundColor = "rgb(173, 216, 230)";
+            ride.style.backgroundColor = "#822e81";         
             setTimeout(function () {
                 ride.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                ride.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -217,8 +264,12 @@
                 ridesound.currentTime = 0;
                 ridesound.play();
                 ride.classList.add("playing");
+                body.style.backgroundColor = "#4381c1";
+                ride.style.backgroundColor = "#822e81";
                 setTimeout(function () {
                     ride.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    ride.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -228,8 +279,12 @@
             snaresound.currentTime = 0;
             snaresound.play();
             snare.classList.add("playing");
+            body.style.backgroundColor = "#f593e0";
+            snare.style.backgroundColor = "#8cd790";
             setTimeout(function () {
                 snare.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                snare.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -239,8 +294,12 @@
                 snaresound.currentTime = 0;
                 snaresound.play();
                 snare.classList.add("playing");
+                body.style.backgroundColor = "#f593e0";
+                snare.style.backgroundColor = "#8cd790";
                 setTimeout(function () {
                     snare.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    snare.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -250,8 +309,12 @@
             tomsound.currentTime = 0;
             tomsound.play();
             tom.classList.add("playing");
+            body.style.backgroundColor = "#822e81";
+            tom.style.backgroundColor = "#568259";
             setTimeout(function () {
                 tom.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                tom.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -261,8 +324,12 @@
                 tomsound.currentTime = 0;
                 tomsound.play();
                 tom.classList.add("playing");
+                body.style.backgroundColor = "#822e81";
+                tom.style.backgroundColor = "#568259";
                 setTimeout(function () {
                     tom.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    tom.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })       
@@ -272,8 +339,12 @@
             tinksound.currentTime = 0;
             tinksound.play();
             tink.classList.add("playing");
+            body.style.backgroundColor = "#8cd790";
+            tink.style.backgroundColor = "#33658a";
             setTimeout(function () {
                 tink.classList.remove("playing");
+                body.style.backgroundColor = "rgb(173, 216, 230)";
+                tink.style.backgroundColor = "#ffffff";
             }, 250)
         })
 
@@ -283,8 +354,12 @@
                 tinksound.currentTime = 0;
                 tinksound.play();
                 tink.classList.add("playing");
+                body.style.backgroundColor = "#8cd790";
+                tink.style.backgroundColor = "#33658a";
                 setTimeout(function () {
                     tink.classList.remove("playing");
+                    body.style.backgroundColor = "rgb(173, 216, 230)";
+                    tink.style.backgroundColor = "#ffffff";
                 }, 250)
             }
         })
